@@ -1,20 +1,24 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+
+import Home from './pages/home';
+import Login from './pages/login';
+import Signup from './pages/signUp';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <BrowserRouter>
+        <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </BrowserRouter>
   );
 }
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+// removed to solve merge conflict
+// import StackNavigator from './navigation/StackNavigator';
+//
+// export default function App() {
+//     return <StackNavigator />;
+// }
