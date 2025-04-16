@@ -1,26 +1,43 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import Navbar from "../components/Navbar";
 
-export default function LoginScreen() {
-  const [identifier, setIdentifier] = useState(''); // can be email or username
+export default function SignUpScreen() {
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [confirm, setConfirm] = useState('');
 
-  const handleLogin = () => {
-    const isEmail = identifier.includes('@');
-    console.log(`Logging in with ${isEmail ? 'email' : 'username'}:`, identifier);
+  const handleSignUp = () => {
+    if (password !== confirm) {
+      alert("Passwords don't match!");
+      return;
+    }
+
+    console.log('Signing up with', username, email, password);
     // backend
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Login</Text>
+      <Navbar></Navbar>
+      <Text style={styles.title}>Sign Up</Text>
 
       <TextInput
         style={styles.input}
-        placeholder="Username or Email"
+        placeholder="Username"
         autoCapitalize="none"
-        onChangeText={setIdentifier}
-        value={identifier}
+        onChangeText={setUsername}
+        value={username}
+      />
+
+      <TextInput
+        style={styles.input}
+        placeholder="Email"
+        autoCapitalize="none"
+        keyboardType="email-address"
+        onChangeText={setEmail}
+        value={email}
       />
 
       <TextInput
@@ -31,8 +48,16 @@ export default function LoginScreen() {
         value={password}
       />
 
-      <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>Log In</Text>
+      <TextInput
+        style={styles.input}
+        placeholder="Confirm Password"
+        secureTextEntry
+        onChangeText={setConfirm}
+        value={confirm}
+      />
+
+      <TouchableOpacity style={styles.button} onPress={handleSignUp}>
+        <Text style={styles.buttonText}>Create Account</Text>
       </TouchableOpacity>
     </View>
   );
