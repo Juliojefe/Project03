@@ -15,10 +15,3 @@ export default function App() {
       </BrowserRouter>
   );
 }
-
-// removed to solve merge conflict
-// import StackNavigator from './navigation/StackNavigator';
-//
-// export default function App() {
-//     return <StackNavigator />;
-// }
