@@ -1,41 +1,28 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import Navbar from "../components/Navbar";
 
-export default function SignUpScreen() {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
+export default function LoginScreen() {
+  const [identifier, setIdentifier] = useState(''); // can be email or username
   const [password, setPassword] = useState('');
-  const [confirm, setConfirm] = useState('');
 
-  const handleSignUp = () => {
-    if (password !== confirm) {
-      alert("Passwords don't match!");
-      return;
-    }
-
-    console.log('Signing up with', username, email, password);
+  const handleLogin = () => {
+    const isEmail = identifier.includes('@');
+    console.log(`Logging in with ${isEmail ? 'email' : 'username'}:`, identifier);
     // backend
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Sign Up</Text>
+      <Navbar></Navbar>
+      <Text style={styles.title}>Login</Text>
 
       <TextInput
         style={styles.input}
-        placeholder="Username"
+        placeholder="Username or Email"
         autoCapitalize="none"
-        onChangeText={setUsername}
-        value={username}
-      />
-
-      <TextInput
-        style={styles.input}
-        placeholder="Email"
-        autoCapitalize="none"
-        keyboardType="email-address"
-        onChangeText={setEmail}
-        value={email}
+        onChangeText={setIdentifier}
+        value={identifier}
       />
 
       <TextInput
@@ -46,16 +33,8 @@ export default function SignUpScreen() {
         value={password}
       />
 
-      <TextInput
-        style={styles.input}
-        placeholder="Confirm Password"
-        secureTextEntry
-        onChangeText={setConfirm}
-        value={confirm}
-      />
-
-      <TouchableOpacity style={styles.button} onPress={handleSignUp}>
-        <Text style={styles.buttonText}>Create Account</Text>
+      <TouchableOpacity style={styles.button} onPress={handleLogin}>
+        <Text style={styles.buttonText}>Log In</Text>
       </TouchableOpacity>
     </View>
   );
