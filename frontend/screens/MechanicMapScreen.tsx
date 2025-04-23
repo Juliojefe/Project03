@@ -1,290 +1,200 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, ScrollView, Button, TouchableOpacity, StyleSheet, Alert } from 'react-native';
-import MapView, { Marker } from 'react-native-maps';
+import {
+  View,
+  Text,
+  StyleSheet,
+  Alert,
+  TouchableOpacity,
+  ScrollView,
+  Button,
+} from 'react-native';
+import MapView, { Marker, Circle } from 'react-native-maps';
 import * as Location from 'expo-location';
-
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RootStackParamList } from '../types'; // Adjust the path to where your types are defined
-
-type MechanicMapScreenNavigationProp = StackNavigationProp<RootStackParamList, 'MechanicMapScreen'>;
+import Slider from '@react-native-community/slider';
 
 interface Mechanic {
   id: number;
   name: string;
   lat: number;
   lon: number;
+  rating: number;
+  description: string;
 }
 
-interface Comment {
-  id: number;
-  author: string;
-  content: string;
-  timestamp: string;
-}
-
-interface Post {
-  id: number;
-  author: string;
-  userType: 'customer' | 'mechanic';
-  content: string;
-  timestamp: string;
-  comments: Comment[];
-}
-
-export default function MechanicMapScreen({ navigation }: { navigation: MechanicMapScreenNavigationProp }): React.ReactElement {
-  const [location, setLocation] = useState<Location.LocationObject['coords'] | null>(null);
-  const [radius, setRadius] = useState(25);
+export default function MechanicMapScreen({ navigation }: any) {
+  const [location, setLocation] = useState<{ latitude: number; longitude: number } | null>(null);
+  const [radius, setRadius] = useState(15);
+  const [zoom, setZoom] = useState(0.2);
   const [mechanics, setMechanics] = useState<Mechanic[]>([]);
-  const [posts, setPosts] = useState<Post[]>([]);
-
-  // Sample data (you would fetch this from your backend)
-  const fakeMechanics: Mechanic[] = [
-    { id: 1, name: "Joe's Garage", lat: 36.17, lon: -115.14 },
-    { id: 2, name: "Quick Fix Auto", lat: 36.18, lon: -115.13 },
-  ];
-  
-  // Sample posts data
-  const fakePosts = [
-    { id: 1, author: 'John D.', userType: 'customer', content: 'Anyone know a good place to fix my Honda Civic?', timestamp: '15 min ago', comments: [] },
-    { id: 2, author: "Joe's Garage", userType: 'mechanic', content: "We specialize in Japanese cars. Offering 15% off on brake service this week!", timestamp: '2 hours ago', comments: [
-      { id: 101, author: 'Sarah T.', content: 'Do you work on Toyotas too?', timestamp: '1 hour ago' }
-    ] },
-    { id: 3, author: 'Quick Fix Auto', userType: 'mechanic', content: 'Open today until 7pm for emergency repairs. Call us!', timestamp: '5 hours ago', comments: [] }
-  ];
 
   useEffect(() => {
     (async () => {
-      let { status } = await Location.requestForegroundPermissionsAsync();
+      const { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== 'granted') {
-        Alert.alert('Permission denied', 'We need location access to find nearby mechanics.');
+        Alert.alert('Permission Denied', 'Location access is required.');
         return;
       }
-      let loc = await Location.getCurrentPositionAsync({});
-      setLocation(loc.coords);
-      
-      // This would be replaced with actual API calls
-      setMechanics(fakeMechanics);
-      setPosts(fakePosts);
-      
-      // TODO: Fetch mechanics and posts from backend using loc.coords and radius
+
+      const loc = await Location.getCurrentPositionAsync({});
+      const coords = {
+        latitude: loc.coords.latitude,
+        longitude: loc.coords.longitude,
+      };
+      setLocation(coords);
+
+      // MOCK DATA
+      setMechanics([
+        {
+          id: 1,
+          name: "Joe's Garage",
+          lat: coords.latitude + 0.06,
+          lon: coords.longitude - 0.06,
+          rating: 4.6,
+          description: 'Trusted brake and engine repair.',
+        },
+        {
+          id: 2,
+          name: 'Quick Fix Auto',
+          lat: coords.latitude - 0.06,
+          lon: coords.longitude + 0.06,
+          rating: 4.3,
+          description: 'Suspension and tire balancing services.',
+        },
+        {
+          id: 3,
+          name: 'Precision Motors',
+          lat: coords.latitude + 0.05,
+          lon: coords.longitude + 0.05,
+          rating: 4.9,
+          description: 'Free diagnostics and 20% off oil changes.',
+        },
+      ]);
     })();
   }, [radius]);
 
   return (
-    <View style={{ flex: 1 }}>
-      {/* Header */}
-      <View style={styles.topBar}>
-        <Text style={styles.title}>FixIt</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('EditAccount')}>
-          <Text style={styles.actionBtn}>Edit</Text>
-        </TouchableOpacity>
-        <TouchableOpacity onPress={() => navigation.navigate('Login')}>
-          <Text style={styles.actionBtn}>Sign Out</Text>
-        </TouchableOpacity>
+    <View style={styles.container}>
+      <View style={styles.header}>
+        <Text style={styles.headerText}>🔧 Mechanic Map</Text>
       </View>
 
-      {/* Radius Filter */}
-      <View style={styles.radiusContainer}>
-        {[25, 50, 100].map((r) => (
-          <Button key={r} title={`${r} miles`} onPress={() => setRadius(r)} />
-        ))}
-      </View>
-
-      {/* Main Content Area */}
-      <View style={styles.contentContainer}>
-        {/* Map Section (Left Side) */}
-        <View style={styles.mapContainer}>
-          {location && (
-            <MapView
-              style={styles.map}
-              initialRegion={{
-                latitude: location.latitude,
-                longitude: location.longitude,
-                latitudeDelta: 0.05,
-                longitudeDelta: 0.05,
-              }}
-            >
-              {mechanics.map((m) => (
-                <Marker key={m.id} coordinate={{ latitude: m.lat, longitude: m.lon }} title={m.name} />
-              ))}
-            </MapView>
-          )}
-          
-          {/* Mechanics List */}
-          <ScrollView style={styles.mechanicsListContainer}>
-            <Text style={styles.sectionTitle}>Nearby Mechanics</Text>
-            {mechanics.map((m) => (
-              <View key={m.id} style={styles.mechanicCard}>
-                <Text style={styles.cardTitle}>{m.name}</Text>
-                <Button title="Message" onPress={() => navigation.navigate('Messages', { mechanicId: m.id })} />
-              </View>
+      {location && (
+        <MapView
+          style={styles.map}
+          region={{
+            latitude: location.latitude,
+            longitude: location.longitude,
+            latitudeDelta: zoom,
+            longitudeDelta: zoom,
+          }}
+        >
+          <Marker coordinate={location} title="You Are Here" />
+          <Circle
+            center={location}
+            radius={radius * 1609.34}
+            strokeColor="red"
+            fillColor="rgba(255, 0, 0, 0.2)"
+          />
+          {Array.isArray(mechanics) &&
+            mechanics.map((m) => (
+              <Marker
+                key={m.id}
+                coordinate={{ latitude: m.lat, longitude: m.lon }}
+                title={`${m.name} ⭐ ${m.rating}`}
+                pinColor="blue"
+                onCalloutPress={() => navigation.navigate('Posts', { mechanic: m })}
+              />
             ))}
-          </ScrollView>
-        </View>
+        </MapView>
+      )}
 
-        {/* Posts Feed (Right/Center) */}
-        <ScrollView style={styles.postsFeedContainer}>
-          <View style={styles.newPostContainer}>
-            <Button 
-              title="What's your car problem?" 
-              onPress={() => navigation.navigate('NewPost')} 
-            />
-          </View>
-          
-          {posts.map((post) => (
-            <View key={post.id} style={styles.postCard}>
-              <View style={styles.postHeader}>
-                <Text style={styles.postAuthor}>{post.author}</Text>
-                <Text style={styles.postTimestamp}>{post.timestamp}</Text>
-              </View>
-              <Text style={styles.postContent}>{post.content}</Text>
-              
-              {/* Comments */}
-              {post.comments.length > 0 && (
-                <View style={styles.commentsContainer}>
-                  {post.comments.map((comment) => (
-                    <View key={comment.id} style={styles.commentCard}>
-                      <Text style={styles.commentAuthor}>{comment.author}</Text>
-                      <Text style={styles.commentContent}>{comment.content}</Text>
-                      <Text style={styles.commentTimestamp}>{comment.timestamp}</Text>
-                    </View>
-                  ))}
-                </View>
-              )}
-              
-              {/* Comment & Like Buttons */}
-              <View style={styles.postActions}>
-                <TouchableOpacity onPress={() => Alert.alert('Comment', 'Add comment feature')}>
-                  <Text style={styles.actionText}>Comment</Text>
-                </TouchableOpacity>
-                <TouchableOpacity onPress={() => Alert.alert('Like', 'Post liked')}>
-                  <Text style={styles.actionText}>Like</Text>
-                </TouchableOpacity>
-              </View>
-            </View>
-          ))}
-        </ScrollView>
+      <View style={styles.sliderContainer}>
+        <Text style={styles.radiusText}>Radius: {radius} miles</Text>
+        <Slider
+          style={{ width: '90%' }}
+          minimumValue={5}
+          maximumValue={100}
+          step={5}
+          value={radius}
+          onValueChange={(value) => setRadius(value)}
+          minimumTrackTintColor="red"
+          maximumTrackTintColor="#000000"
+        />
       </View>
+
+      <View style={styles.zoomControls}>
+        <TouchableOpacity onPress={() => setZoom(Math.max(0.01, zoom - 0.02))} style={styles.zoomButton}>
+          <Text style={styles.zoomText}>➕</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => setZoom(Math.min(1, zoom + 0.02))} style={styles.zoomButton}>
+          <Text style={styles.zoomText}>➖</Text>
+        </TouchableOpacity>
+      </View>
+
+      <ScrollView style={styles.listContainer}>
+        <Text style={styles.sectionTitle}>Nearby Mechanics</Text>
+        {mechanics.map((m) => (
+          <View key={m.id} style={styles.card}>
+            <Text style={styles.cardTitle}>{m.name}</Text>
+            <Text>{m.description}</Text>
+            <Text>⭐ {m.rating.toFixed(1)}</Text>
+            <Button title="View Posts" onPress={() => navigation.navigate('Posts', { mechanic: m })} />
+          </View>
+        ))}
+      </ScrollView>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  topBar: {
-    flexDirection: 'row',
-    paddingTop: 40,
-    paddingBottom: 10,
-    paddingHorizontal: 10,
-    justifyContent: 'space-between',
-    backgroundColor: '#eee',
+  container: { flex: 1, backgroundColor: '#f9f9f9' },
+  header: {
+    paddingTop: 45,
+    paddingBottom: 15,
+    backgroundColor: '#222',
+    alignItems: 'center',
   },
-  title: { fontSize: 24, fontWeight: 'bold' },
-  actionBtn: { color: 'blue', paddingHorizontal: 10 },
-  radiusContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginVertical: 10,
+  headerText: { fontSize: 20, color: '#fff', fontWeight: 'bold' },
+  map: { flex: 1 },
+  sliderContainer: {
+    backgroundColor: '#fff',
+    paddingVertical: 10,
+    alignItems: 'center',
   },
-  contentContainer: {
-    flex: 1,
+  radiusText: { fontSize: 16, marginBottom: 5, fontWeight: '500' },
+  zoomControls: {
     flexDirection: 'row',
+    justifyContent: 'center',
+    backgroundColor: '#fff',
+    paddingBottom: 15,
   },
-  // Map section styles
-  mapContainer: {
-    width: '35%',
+  zoomButton: {
+    backgroundColor: '#ccc',
     padding: 10,
+    marginHorizontal: 10,
+    borderRadius: 8,
   },
-  map: {
-    height: 200,
-    borderRadius: 10,
-    marginBottom: 10,
-  },
-  mechanicsListContainer: {
-    flex: 1,
-    maxHeight: 300,
-  },
-  mechanicCard: {
-    backgroundColor: '#f5f5f5',
-    marginBottom: 10,
+  zoomText: { fontSize: 20 },
+  listContainer: {
     padding: 10,
-    borderRadius: 10,
+    backgroundColor: '#fff',
+    maxHeight: 220,
   },
   sectionTitle: {
-    fontSize: 16,
     fontWeight: 'bold',
-    marginBottom: 5,
+    fontSize: 16,
+    marginBottom: 8,
   },
-  // Posts feed styles
-  postsFeedContainer: {
-    flex: 1,
-    width: '65%',
-    padding: 10,
-  },
-  newPostContainer: {
-    marginBottom: 15,
-  },
-  postCard: {
-    backgroundColor: '#f5f5f5',
-    marginBottom: 15,
+  card: {
+    backgroundColor: '#dbeafe',
+    marginBottom: 10,
     padding: 15,
     borderRadius: 10,
-  },
-  postHeader: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    marginBottom: 5,
-  },
-  postAuthor: {
-    fontSize: 16,
-    fontWeight: 'bold',
-  },
-  postTimestamp: {
-    fontSize: 12,
-    color: '#888',
-  },
-  postContent: {
-    fontSize: 14,
-    marginVertical: 8,
-  },
-  commentsContainer: {
-    marginTop: 10,
-    paddingTop: 10,
-    borderTopWidth: 1,
-    borderTopColor: '#ddd',
-  },
-  commentCard: {
-    backgroundColor: '#eaeaea',
-    padding: 8,
-    borderRadius: 8,
-    marginTop: 5,
-  },
-  commentAuthor: {
-    fontSize: 12,
-    fontWeight: 'bold',
-  },
-  commentContent: {
-    fontSize: 12,
-  },
-  commentTimestamp: {
-    fontSize: 10,
-    color: '#888',
-    alignSelf: 'flex-end',
-  },
-  postActions: {
-    flexDirection: 'row',
-    justifyContent: 'space-around',
-    marginTop: 10,
-    paddingTop: 10,
-    borderTopWidth: 1,
-    borderTopColor: '#ddd',
-  },
-  actionText: {
-    color: 'blue',
-    fontSize: 14,
   },
   cardTitle: {
     fontSize: 16,
     fontWeight: '600',
     marginBottom: 5,
+    color: '#1e3a8a',
   },
 });
