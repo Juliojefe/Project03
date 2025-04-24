@@ -1,100 +1,64 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
-import Navbar from "../components/Navbar";
+import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
+import styles from '../styles';
 
-export default function SignUpScreen() {
-  const [username, setUsername] = useState('');
+const SignupPage = () => {
+  const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirm, setConfirm] = useState('');
+  const [userType, setUserType] = useState('CUSTOMER'); // hardcoded for now
 
-  const handleSignUp = () => {
-    if (password !== confirm) {
-      alert("Passwords don't match!");
-      return;
+  const register = async () => {
+    try {
+      const response = await fetch('http://localhost:8080/api/user/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, password, userType }),
+      });
+
+      const success = await response.json();
+
+      if (success) {
+        Alert.alert('Registration successful');
+        // Navigate to login or home
+      } else {
+        Alert.alert('Registration failed');
+      }
+    } catch (error) {
+      console.error(error);
+      Alert.alert('Error', 'Something went wrong');
     }
-
-    console.log('Signing up with', username, email, password);
-    // backend
   };
 
   return (
     <View style={styles.container}>
-      <Navbar></Navbar>
       <Text style={styles.title}>Sign Up</Text>
-
       <TextInput
         style={styles.input}
-        placeholder="Username"
-        autoCapitalize="none"
-        onChangeText={setUsername}
-        value={username}
+        placeholder="Name"
+        value={name}
+        onChangeText={setName}
       />
-
       <TextInput
         style={styles.input}
         placeholder="Email"
+        value={email}
+        onChangeText={setEmail}
         autoCapitalize="none"
         keyboardType="email-address"
-        onChangeText={setEmail}
-        value={email}
       />
-
       <TextInput
         style={styles.input}
         placeholder="Password"
-        secureTextEntry
-        onChangeText={setPassword}
         value={password}
-      />
-
-      <TextInput
-        style={styles.input}
-        placeholder="Confirm Password"
+        onChangeText={setPassword}
         secureTextEntry
-        onChangeText={setConfirm}
-        value={confirm}
       />
-
-      <TouchableOpacity style={styles.button} onPress={handleSignUp}>
-        <Text style={styles.buttonText}>Create Account</Text>
+      <TouchableOpacity style={styles.button} onPress={register}>
+        <Text style={styles.buttonText}>Register</Text>
       </TouchableOpacity>
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    padding: 24,
-    backgroundColor: '#fff',
-  },
-  title: {
-    fontSize: 32,
-    marginBottom: 32,
-    fontWeight: '600',
-    textAlign: 'center',
-    color: '#333',
-  },
-  input: {
-    height: 48,
-    borderColor: '#ccc',
-    borderWidth: 1,
-    borderRadius: 8,
-    paddingHorizontal: 12,
-    marginBottom: 16,
-  },
-  button: {
-    backgroundColor: '#4A90E2',
-    paddingVertical: 14,
-    borderRadius: 8,
-    marginTop: 12,
-  },
-  buttonText: {
-    color: '#fff',
-    fontWeight: '600',
-    textAlign: 'center',
-    fontSize: 16,
-  },
-});
+export default SignupPage;
