@@ -22,6 +22,7 @@ public class User {
     private String password;
 
     @Column(name = "user_type", nullable = false)
+    @Enumerated(EnumType.STRING)
     private UserType userType;
 
     @Column(name = "profile_pic")

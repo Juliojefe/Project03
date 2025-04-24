@@ -1,6 +1,7 @@
 package com.example.backend.controller;
 
 import com.example.backend.model.Message;
+import com.example.backend.services.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,10 +17,10 @@ import java.util.Optional;
 public class MessageController {
 
     @Autowired
-    private MessageRepository messageRepository;
+    private MessageService messageService;
 
-    @GetMapping("/chat/{chatId}/messages")
-    public List<Message> getMessages(@PathVariable int chatId) {
-        return messageRepository.getMessagesByChatId(chatId);
-    }
+//    @GetMapping("/chat/{chatId}/messages")
+//    public List<Message> getMessages(@PathVariable int chatId) {
+//        return messageRepository.getMessagesByChatId(chatId);
+//    }
 }
