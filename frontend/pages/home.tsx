@@ -5,8 +5,8 @@ export default function Home() {
     return (
         <View style={styles.container}>
             <Navbar></Navbar>
-            <Text>
-                <h1>Home Page</h1>
+            <Text style={styles.text}>
+                Home Page
             </Text>
         </View>
     );
@@ -15,8 +15,13 @@ export default function Home() {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+        padding: 24,
         backgroundColor: '#fff',
-        alignItems: 'center',
-        justifyContent: 'center',
+    },
+    text: {
+        textAlign: "center",
+        fontSize: 30,
+        alignItems: "center",
+        justifyContent: "center",
     },
 });
