@@ -9,6 +9,8 @@ export default function Navbar() {
             <Link to={'/'} style={styles.link}>Home</Link>
             <Link to={'/signup'} style={styles.link}>Signup</Link>
             <Link to={'/login'} style={styles.link}>Login</Link>
+            <Link to={'/screen'} style={styles.link}>Screen</Link>
+            <Link to={'/admin'} style={styles.link}>Admin</Link>
         </View>
     );
 }
@@ -18,11 +20,18 @@ const styles = StyleSheet.create({
         display: "flex",
         justifyContent: "center",
         alignContent: "center",
-        flexDirection: "row"
+        flexDirection: "row",
+        backgroundColor: "gray",
+        padding: 10,
+        borderRadius: 6,
     },
     link: {
-        paddingLeft: 12,
-        paddingRight: 12,
+        marginLeft: 12,
+        marginRight: 12,
+        padding: 4,
+        borderRadius: 6,
+        textDecorationLine: "none",
+        backgroundColor: "white",
     }
 
 })
