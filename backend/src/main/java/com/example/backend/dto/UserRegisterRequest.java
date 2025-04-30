@@ -7,6 +7,7 @@ public class UserRegisterRequest {
     private String email;
     private String password;
     private UserType userType;
+    
 
     public String getName() {
         return name;
@@ -39,4 +40,5 @@ public class UserRegisterRequest {
     public void setUserType(UserType userType) {
         this.userType = userType;
     }
+    
 }

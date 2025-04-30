@@ -8,6 +8,7 @@ const LoginPage = () => {
 
   const login = async () => {
     try {
+
       const response = await fetch('http://localhost:8080/api/user/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -18,7 +19,8 @@ const LoginPage = () => {
 
       if (data.success) {
         Alert.alert('Login successful');
-        // Store token or navigate
+        
+
       } else {
         Alert.alert('Login failed', data.message || 'Invalid credentials');
       }

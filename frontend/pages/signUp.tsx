@@ -1,64 +1,49 @@
-import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
-import styles from '../styles';
+import { useState } from "react";
+import axios from "axios";
 
-const SignupPage = () => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [userType, setUserType] = useState('CUSTOMER'); // hardcoded for now
+interface SignupFormData {
+  name: string;
+  email: string;
+  password: string;
+  userType: "regular_user" | "admin" | "mechanic";
+  profilePic: string;
+}
 
-  const register = async () => {
+export default function SignupForm() {
+  const [form, setForm] = useState<SignupFormData>({
+    name: "",
+    email: "",
+    password: "",
+    userType: "regular_user",
+    profilePic: ""
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setForm({ ...form, [e.target.name]: e.target.value });
+  };
+
+  const handleSignup = async (e: React.FormEvent) => {
+    e.preventDefault();
     try {
-      const response = await fetch('http://localhost:8080/api/user/register', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, password, userType }),
-      });
-
-      const success = await response.json();
-
-      if (success) {
-        Alert.alert('Registration successful');
-        // Navigate to login or home
+      const res = await axios.post<boolean>("http://localhost:8081/api/user/register", form);
+      if (res.data === true) {
+        alert("Signup successful");
       } else {
-        Alert.alert('Registration failed');
+        alert("User already exists");
       }
-    } catch (error) {
-      console.error(error);
-      Alert.alert('Error', 'Something went wrong');
+    } catch (err) {
+      console.error(err);
+      alert("Signup failed");
     }
   };
 
   return (
-    <View style={styles.container}>
-      <Text style={styles.title}>Sign Up</Text>
-      <TextInput
-        style={styles.input}
-        placeholder="Name"
-        value={name}
-        onChangeText={setName}
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Email"
-        value={email}
-        onChangeText={setEmail}
-        autoCapitalize="none"
-        keyboardType="email-address"
-      />
-      <TextInput
-        style={styles.input}
-        placeholder="Password"
-        value={password}
-        onChangeText={setPassword}
-        secureTextEntry
-      />
-      <TouchableOpacity style={styles.button} onPress={register}>
-        <Text style={styles.buttonText}>Register</Text>
-      </TouchableOpacity>
-    </View>
+    <form onSubmit={handleSignup}>
+      <input name="name" placeholder="Name" onChange={handleChange} />
+      <input name="email" placeholder="Email" onChange={handleChange} />
+      <input name="password" type="password" placeholder="Password" onChange={handleChange} />
+      <input name="profilePic" placeholder="Profile Pic URL" onChange={handleChange} />
+      <button type="submit">Sign Up</button>
+    </form>
   );
-};
-
-export default SignupPage;
+}
