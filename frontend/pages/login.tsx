@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
-import styles from '../styles';
+import { useRouter } from 'expo-router';
+import styles from '../styles'; // Adjust this path if needed
 
-const LoginPage = () => {
+const Login = () => {
+  const router = useRouter();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const login = async () => {
     try {
-
       const response = await fetch('http://localhost:8080/api/user/login', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -19,13 +20,12 @@ const LoginPage = () => {
 
       if (data.success) {
         Alert.alert('Login successful');
-        
-
+        router.replace('/home'); 
       } else {
         Alert.alert('Login failed', data.message || 'Invalid credentials');
       }
     } catch (error) {
-      console.error(error);
+      console.error('Login error:', error);
       Alert.alert('Error', 'Something went wrong');
     }
   };
@@ -33,6 +33,7 @@ const LoginPage = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Login</Text>
+
       <TextInput
         style={styles.input}
         placeholder="Email"
@@ -41,6 +42,7 @@ const LoginPage = () => {
         autoCapitalize="none"
         keyboardType="email-address"
       />
+
       <TextInput
         style={styles.input}
         placeholder="Password"
@@ -48,6 +50,7 @@ const LoginPage = () => {
         onChangeText={setPassword}
         secureTextEntry
       />
+
       <TouchableOpacity style={styles.button} onPress={login}>
         <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
@@ -55,4 +58,4 @@ const LoginPage = () => {
   );
 };
 
-export default LoginPage;
+export default Login;
