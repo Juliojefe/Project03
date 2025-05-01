@@ -1,77 +1,59 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
-import Navbar from "../components/Navbar";
+import { View, Text, TextInput, TouchableOpacity, Alert } from 'react-native';
+import styles from '../styles';
 
-export default function LoginScreen() {
-  const [identifier, setIdentifier] = useState(''); // can be email or username
+const LoginPage = () => {
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  const handleLogin = () => {
-    const isEmail = identifier.includes('@');
-    console.log(`Logging in with ${isEmail ? 'email' : 'username'}:`, identifier);
-    // backend
+  const login = async () => {
+    try {
+
+      const response = await fetch('http://localhost:8080/api/user/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email, password }),
+      });
+
+      const data = await response.json();
+      console.log('Response data:', data);
+
+      if (data.success) {
+        Alert.alert('Login successful');
+        
+
+      } else {
+        Alert.alert('Login failed', data.message || 'Invalid credentials');
+      }
+    } catch (error) {
+      console.error(error);
+      Alert.alert('Error', 'Something went wrong');
+    }
   };
 
   return (
     <View style={styles.container}>
-      <Navbar></Navbar>
       <Text style={styles.title}>Login</Text>
-
       <TextInput
         style={styles.input}
-        placeholder="Username or Email"
+        placeholder="Email"
+        value={email}
+        onChangeText={setEmail}
         autoCapitalize="none"
-        onChangeText={setIdentifier}
-        value={identifier}
+        keyboardType="email-address"
       />
-
       <TextInput
         style={styles.input}
         placeholder="Password"
-        secureTextEntry
-        onChangeText={setPassword}
         value={password}
+        onChangeText={setPassword}
+        secureTextEntry
       />
-
-      <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>Log In</Text>
+      <TouchableOpacity style={styles.button} onPress={login}>
+        <Text style={styles.buttonText}>Login</Text>
       </TouchableOpacity>
     </View>
   );
-}
+};
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    padding: 24,
-    backgroundColor: '#fff',
-  },
-  title: {
-    fontSize: 32,
-    marginBottom: 32,
-    fontWeight: '600',
-    textAlign: 'center',
-    color: '#333',
-  },
-  input: {
-    height: 48,
-    borderColor: '#ccc',
-    borderWidth: 1,
-    borderRadius: 8,
-    paddingHorizontal: 12,
-    marginBottom: 16,
-  },
-  button: {
-    backgroundColor: '#4A90E2',
-    paddingVertical: 14,
-    borderRadius: 8,
-    marginTop: 12,
-  },
-  buttonText: {
-    color: '#fff',
-    fontWeight: '600',
-    textAlign: 'center',
-    fontSize: 16,
-  },
-});
+export default LoginPage;
