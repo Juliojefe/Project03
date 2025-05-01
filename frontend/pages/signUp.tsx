@@ -24,8 +24,9 @@ export default function SignupForm() {
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
+    console.log("Form data being sent:", form);
     try {
-      const res = await axios.post<boolean>("http://localhost:8081/api/user/register", form);
+      const res = await axios.post<boolean>("http://localhost:8080/api/user/register", form);
       if (res.data === true) {
         alert("Signup successful");
       } else {
