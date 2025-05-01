@@ -1,4 +1,7 @@
 // Add the navbar to any page by pasting: <Navbar></Navbar>
+<<<<<<< HEAD
+//
+=======
 
 import {Link} from "react-router-dom";
 import {StyleSheet, View} from "react-native";
@@ -35,3 +38,4 @@ const styles = StyleSheet.create({
     }
 
 })
+>>>>>>> f76d6eaec240666c1e9073b9e129c35c67c0341d
