@@ -1,0 +1,202 @@
+[
+    {
+      "id": 1,
+      "name": "Joe's Auto Repair",
+      "lat": 36.6777,
+      "lon": -121.6555,
+      "rating": 4.7,
+      "description": "Brake service and oil change"
+    },
+    {
+      "id": 2,
+      "name": "Quick Fix Auto",
+      "lat": 36.6789,
+      "lon": -121.66,
+      "rating": 4.3,
+      "description": "General repairs"
+    },
+    {
+      "id": 3,
+      "name": "All Star Mechanics",
+      "lat": 36.6844,
+      "lon": -121.6473,
+      "rating": 4.9,
+      "description": "Tire & brake service"
+    },
+    {
+      "id": 4,
+      "name": "Downtown Garage",
+      "lat": 36.6742,
+      "lon": -121.6519,
+      "rating": 4.1,
+      "description": "Smog checks"
+    },
+    {
+      "id": 5,
+      "name": "Salinas Auto Solutions",
+      "lat": 36.6818,
+      "lon": -121.662,
+      "rating": 4.6,
+      "description": "Complete diagnostics"
+    },
+    {
+      "id": 6,
+      "name": "Reliable Repairs",
+      "lat": 36.6762,
+      "lon": -121.6499,
+      "rating": 4.4,
+      "description": "AC & electrical"
+    },
+    {
+      "id": 7,
+      "name": "Express Mechanics",
+      "lat": 36.6795,
+      "lon": -121.6547,
+      "rating": 4.2,
+      "description": "Fast repairs"
+    },
+    {
+      "id": 8,
+      "name": "Bay Auto Care",
+      "lat": 37.7749,
+      "lon": -122.4194,
+      "rating": 4.8,
+      "description": "Full service garage"
+    },
+    {
+      "id": 9,
+      "name": "SF Brake & Tire",
+      "lat": 37.7793,
+      "lon": -122.4192,
+      "rating": 4.5,
+      "description": "Brakes and alignments"
+    },
+    {
+      "id": 10,
+      "name": "NorCal Mechanics",
+      "lat": 37.7842,
+      "lon": -122.4123,
+      "rating": 4.7,
+      "description": "Engine and exhaust"
+    },
+    {
+      "id": 11,
+      "name": "Elite Auto",
+      "lat": 37.774,
+      "lon": -122.431,
+      "rating": 4.6,
+      "description": "Luxury car service"
+    },
+    {
+      "id": 12,
+      "name": "Downtown SF Auto",
+      "lat": 37.777,
+      "lon": -122.4167,
+      "rating": 4.2,
+      "description": "Quick tune-ups"
+    },
+    {
+      "id": 13,
+      "name": "East San Jose Mechanics",
+      "lat": 37.3382,
+      "lon": -121.8863,
+      "rating": 4.4,
+      "description": "Local favorite"
+    },
+    {
+      "id": 14,
+      "name": "SJ Auto Experts",
+      "lat": 37.3369,
+      "lon": -121.8907,
+      "rating": 4.8,
+      "description": "Certified pros"
+    },
+    {
+      "id": 15,
+      "name": "South Bay Mechanics",
+      "lat": 37.33,
+      "lon": -121.9,
+      "rating": 4.1,
+      "description": "Affordable repairs"
+    },
+    {
+      "id": 16,
+      "name": "Mountain View Auto",
+      "lat": 37.3861,
+      "lon": -122.0839,
+      "rating": 4.9,
+      "description": "Known for diagnostics"
+    },
+    {
+      "id": 17,
+      "name": "MV Car Center",
+      "lat": 37.39,
+      "lon": -122.08,
+      "rating": 4.6,
+      "description": "Friendly service"
+    },
+    {
+      "id": 18,
+      "name": "Greenfield Garage",
+      "lat": 36.3202,
+      "lon": -121.2436,
+      "rating": 4.3,
+      "description": "Rural area specialists"
+    },
+    {
+      "id": 19,
+      "name": "Soledad Car Clinic",
+      "lat": 36.4247,
+      "lon": -121.3264,
+      "rating": 4.5,
+      "description": "Reliable staff"
+    },
+    {
+      "id": 20,
+      "name": "King City Auto Shop",
+      "lat": 36.2125,
+      "lon": -121.1347,
+      "rating": 4.0,
+      "description": "Tires and inspections"
+    },
+    {
+      "id": 21,
+      "name": "Carmel Auto Center",
+      "lat": 36.5552,
+      "lon": -121.9233,
+      "rating": 4.8,
+      "description": "Coastal service"
+    },
+    {
+      "id": 22,
+      "name": "Monterey Bay Mechanics",
+      "lat": 36.6002,
+      "lon": -121.8947,
+      "rating": 4.9,
+      "description": "Highly recommended"
+    },
+    {
+      "id": 23,
+      "name": "Watsonville Car Doctors",
+      "lat": 36.9102,
+      "lon": -121.7569,
+      "rating": 4.2,
+      "description": "Local team"
+    },
+    {
+      "id": 24,
+      "name": "Gilroy Garage Pros",
+      "lat": 37.0058,
+      "lon": -121.5683,
+      "rating": 4.4,
+      "description": "Major and minor repairs"
+    },
+    {
+      "id": 25,
+      "name": "Castroville Auto Works",
+      "lat": 36.7658,
+      "lon": -121.7505,
+      "rating": 4.3,
+      "description": "Smog & brakes"
+    }
+  ]
