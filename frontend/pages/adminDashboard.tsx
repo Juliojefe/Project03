@@ -1,7 +1,28 @@
-import {Button, StyleSheet, Text, View} from 'react-native';
+import {Button, ScrollView, StyleSheet, Text, View} from 'react-native';
 import Navbar from "../components/Navbar";
 
 export default function Home() {
+    // creates a mechanic request
+    const createRequest= (firstName = "FirstName", lastName = "LastName") => {
+        return (
+            <View style={styles.pendingMechanic}>
+                <Text>
+                    {firstName} {lastName}
+                </Text>
+                <Button title={"Accept"} onPress={() => alert('Accepted')}></Button>
+                <Button title={"Decline"} onPress={() => alert('Declined')}></Button>
+            </View>
+        );
+    }
+
+    // list containing mechanic requests
+    let requests = [];
+    // using parameters to send name
+    requests.push(createRequest("Test", "Subject"));
+    for (let i = 0; i < 30; i++){
+        requests.push(createRequest());
+    }
+
     return (
         <View style={styles.container}>
             <Navbar></Navbar>
@@ -9,16 +30,11 @@ export default function Home() {
                 Admin Dashboard
             </Text>
 
-            {/*template for users requesting to become mechanics*/}
-            {/*will be implemented later to create this template for each user and add to a list*/}
             {/*needs to be connected to backend*/}
-            <View style={styles.pendingMechanic}>
-                <Text>
-                    FirstName LastName
-                </Text>
-                <Button title={"Accept"} onPress={() => alert('Accepted')}></Button>
-                <Button title={"Decline"} onPress={() => alert('Declined')}></Button>
-            </View>
+            <ScrollView>
+                {/*this inserts the created mechanic requests*/}
+                {requests}
+            </ScrollView>
 
         </View>
     );
