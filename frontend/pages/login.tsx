@@ -17,6 +17,7 @@ const Login = () => {
       });
 
       const data = await response.json();
+      console.log('Response data:', data);
 
       if (data.success) {
         Alert.alert('Login successful');
