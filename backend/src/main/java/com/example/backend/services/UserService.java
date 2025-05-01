@@ -11,6 +11,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -58,37 +59,118 @@ public class UserService {
 
 
     public boolean updateName(UpdateNameRequest request) {
-        //  TODO
+        Optional<User> user = userRepository.findById(request.getUserId());
+        if (user.isPresent()) {
+            User tempUser = user.get();
+            tempUser.setName(request.getName());
+            userRepository.save(tempUser);
+            logger.info("User name updated logged successfully");
+            return true;
+        }
+        logger.warn("User with id:{} was not found", request.getUserId());
         return false;
     }
 
     public boolean updateEmail(UpdateEmailRequest request) {
-        //  TODO
+        Optional<User> idUser = userRepository.findById(request.getUserId());
+        Optional<User> emailUser = userRepository.findByEmail(request.getEmail());
+        if (idUser.isPresent() && emailUser.isPresent()) {
+            User numUser = idUser.get();
+            User strUser = emailUser.get();
+            if (numUser.getUserId() != strUser.getUserId()) {
+                logger.warn("email in use");
+                return false;
+            }
+            numUser.setEmail(request.getEmail());
+            userRepository.save(numUser);
+            logger.info("email update successfully");
+            return true;
+        }
+        if (idUser.isPresent()) {
+            User tempUser = idUser.get();
+            tempUser.setEmail(request.getEmail());
+            userRepository.save(tempUser);
+            logger.info("email update successfully");
+            return true;
+        }
+        logger.warn("User with id:{} was not found", request.getUserId());
         return false;
     }
 
     public boolean updatePassword(UpdatePasswordRequest request) {
-        //  TODO
+        Optional<User> user = userRepository.findById(request.getUserId());
+        if (user.isPresent()) {
+            User tempUser = user.get();
+            String oldPassword = request.getOldPassword();
+            String storedHashedPassword = tempUser.getPassword();
+            String newPassword = request.getNewPassword();
+            if (passwordEncoder.matches(oldPassword, storedHashedPassword)) {
+                tempUser.setPassword(passwordEncoder.encode(newPassword));
+                userRepository.save(tempUser);
+                logger.info("password update successfully");
+                return true;
+            }
+        }
+        logger.warn("password mismatch or non-existent user with id:{}", request.getUserId());
         return false;
     }
 
     public boolean makeAdmin(MakeAdminRequest request) {
-        //  TODO
+        Optional<User> user = userRepository.findById(request.getUserId());
+        if (user.isPresent()) {
+            User tempUser = user.get();
+            tempUser.setUserType(UserType.admin);
+            userRepository.save(tempUser);
+            return true;
+        }
+        logger.warn("User with id:{} was not found", request.getUserId());
         return false;
     }
 
     public boolean makeMechanic(MakeMechanicRequest request) {
-        //  TODO
+        Optional<User> user = userRepository.findById(request.getUserId());
+        if (user.isPresent()) {
+            User tempUser = user.get();
+            tempUser.setUserType(UserType.mechanic);
+            userRepository.save(tempUser);
+            return true;
+        }
+        logger.warn("User with id:{} was not found", request.getUserId());
         return false;
     }
 
     public boolean makeRegularUser(MakeRegularUserRequest request) {
-        //  TODO
+        Optional<User> user = userRepository.findById(request.getUserId());
+        if (user.isPresent()) {
+            User tempUser = user.get();
+            tempUser.setUserType(UserType.regular_user);
+            userRepository.save(tempUser);
+            return true;
+        }
+        logger.warn("User with id:{} was not found", request.getUserId());
         return false;
     }
 
     public boolean updateProfilePic(UpdateProfilePicRequest request) {
-        //  TODO
+        Optional<User> user = userRepository.findById(request.getUserId());
+        if (user.isPresent()) {
+            User tempUser = user.get();
+            tempUser.setProfilePic(request.getPictureUrl());
+            userRepository.save(tempUser);
+            return true;
+        }
+        logger.warn("User with id:{} was not found", request.getUserId());
+        return false;
+    }
+
+    public boolean deleteUser(DeleteUserRequest request) {
+        Optional<User> user = userRepository.findById(request.getUserId());
+        if (user.isPresent()) {
+            User tempUser = user.get();
+            userRepository.delete(tempUser);
+            return true;
+        }
+        logger.warn("User with id:{} was not found", request.getUserId());
         return false;
     }
 }
