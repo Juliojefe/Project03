@@ -1,9 +1,9 @@
 package com.example.backend.dto;
 
-public class MakeAdminRequest {
-    int userId;
+public class DeleteUserRequest {
+    private int userId;
 
-    public MakeAdminRequest(int userId) {
+    public DeleteUserRequest(int userId) {
         this.userId = userId;
     }
 
