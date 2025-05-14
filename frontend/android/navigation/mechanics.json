@@ -1,202 +1,3594 @@
 [
-    {
-      "id": 1,
-      "name": "Joe's Auto Repair",
-      "lat": 36.6777,
-      "lon": -121.6555,
-      "rating": 4.7,
-      "description": "Brake service and oil change"
-    },
-    {
-      "id": 2,
-      "name": "Quick Fix Auto",
-      "lat": 36.6789,
-      "lon": -121.66,
-      "rating": 4.3,
-      "description": "General repairs"
-    },
-    {
-      "id": 3,
-      "name": "All Star Mechanics",
-      "lat": 36.6844,
-      "lon": -121.6473,
-      "rating": 4.9,
-      "description": "Tire & brake service"
-    },
-    {
-      "id": 4,
-      "name": "Downtown Garage",
-      "lat": 36.6742,
-      "lon": -121.6519,
-      "rating": 4.1,
-      "description": "Smog checks"
-    },
-    {
-      "id": 5,
-      "name": "Salinas Auto Solutions",
-      "lat": 36.6818,
-      "lon": -121.662,
-      "rating": 4.6,
-      "description": "Complete diagnostics"
-    },
-    {
-      "id": 6,
-      "name": "Reliable Repairs",
-      "lat": 36.6762,
-      "lon": -121.6499,
-      "rating": 4.4,
-      "description": "AC & electrical"
-    },
-    {
-      "id": 7,
-      "name": "Express Mechanics",
-      "lat": 36.6795,
-      "lon": -121.6547,
-      "rating": 4.2,
-      "description": "Fast repairs"
-    },
-    {
-      "id": 8,
-      "name": "Bay Auto Care",
-      "lat": 37.7749,
-      "lon": -122.4194,
-      "rating": 4.8,
-      "description": "Full service garage"
-    },
-    {
-      "id": 9,
-      "name": "SF Brake & Tire",
-      "lat": 37.7793,
-      "lon": -122.4192,
-      "rating": 4.5,
-      "description": "Brakes and alignments"
-    },
-    {
-      "id": 10,
-      "name": "NorCal Mechanics",
-      "lat": 37.7842,
-      "lon": -122.4123,
-      "rating": 4.7,
-      "description": "Engine and exhaust"
-    },
-    {
-      "id": 11,
-      "name": "Elite Auto",
-      "lat": 37.774,
-      "lon": -122.431,
-      "rating": 4.6,
-      "description": "Luxury car service"
-    },
-    {
-      "id": 12,
-      "name": "Downtown SF Auto",
-      "lat": 37.777,
-      "lon": -122.4167,
-      "rating": 4.2,
-      "description": "Quick tune-ups"
-    },
-    {
-      "id": 13,
-      "name": "East San Jose Mechanics",
-      "lat": 37.3382,
-      "lon": -121.8863,
-      "rating": 4.4,
-      "description": "Local favorite"
-    },
-    {
-      "id": 14,
-      "name": "SJ Auto Experts",
-      "lat": 37.3369,
-      "lon": -121.8907,
-      "rating": 4.8,
-      "description": "Certified pros"
-    },
-    {
-      "id": 15,
-      "name": "South Bay Mechanics",
-      "lat": 37.33,
-      "lon": -121.9,
-      "rating": 4.1,
-      "description": "Affordable repairs"
-    },
-    {
-      "id": 16,
-      "name": "Mountain View Auto",
-      "lat": 37.3861,
-      "lon": -122.0839,
-      "rating": 4.9,
-      "description": "Known for diagnostics"
-    },
-    {
-      "id": 17,
-      "name": "MV Car Center",
-      "lat": 37.39,
-      "lon": -122.08,
-      "rating": 4.6,
-      "description": "Friendly service"
-    },
-    {
-      "id": 18,
-      "name": "Greenfield Garage",
-      "lat": 36.3202,
-      "lon": -121.2436,
-      "rating": 4.3,
-      "description": "Rural area specialists"
-    },
-    {
-      "id": 19,
-      "name": "Soledad Car Clinic",
-      "lat": 36.4247,
-      "lon": -121.3264,
-      "rating": 4.5,
-      "description": "Reliable staff"
-    },
-    {
-      "id": 20,
-      "name": "King City Auto Shop",
-      "lat": 36.2125,
-      "lon": -121.1347,
-      "rating": 4.0,
-      "description": "Tires and inspections"
-    },
-    {
-      "id": 21,
-      "name": "Carmel Auto Center",
-      "lat": 36.5552,
-      "lon": -121.9233,
-      "rating": 4.8,
-      "description": "Coastal service"
-    },
-    {
-      "id": 22,
-      "name": "Monterey Bay Mechanics",
-      "lat": 36.6002,
-      "lon": -121.8947,
-      "rating": 4.9,
-      "description": "Highly recommended"
-    },
-    {
-      "id": 23,
-      "name": "Watsonville Car Doctors",
-      "lat": 36.9102,
-      "lon": -121.7569,
-      "rating": 4.2,
-      "description": "Local team"
-    },
-    {
-      "id": 24,
-      "name": "Gilroy Garage Pros",
-      "lat": 37.0058,
-      "lon": -121.5683,
-      "rating": 4.4,
-      "description": "Major and minor repairs"
-    },
-    {
-      "id": 25,
-      "name": "Castroville Auto Works",
-      "lat": 36.7658,
-      "lon": -121.7505,
-      "rating": 4.3,
-      "description": "Smog & brakes"
-    }
-  ]
+  {
+    "id": 1,
+    "name": "Speedy Motors #1",
+    "lat": 36.686465,
+    "lon": -121.658792,
+    "rating": 4.4,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "27 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "25 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "City Garage #1",
+    "lat": 36.675355,
+    "lon": -121.654317,
+    "rating": 4.6,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "33 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "26 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Elite Auto Works #1",
+    "lat": 36.667761,
+    "lon": -121.646873,
+    "rating": 4.1,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "31 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Metro Mechanics #1",
+    "lat": 36.673277,
+    "lon": -121.667331,
+    "rating": 4.7,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "32 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "17 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Rapid Repairs #1",
+    "lat": 36.684195,
+    "lon": -121.653911,
+    "rating": 4.4,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "5 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "41 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "47 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Northside Garage #1",
+    "lat": 36.683865,
+    "lon": -121.647694,
+    "rating": 4.1,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "16 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "12 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "27 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Urban Auto Pros #1",
+    "lat": 36.667744,
+    "lon": -121.649141,
+    "rating": 4.6,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "23 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "34 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "24 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Valley Vehicle Care #1",
+    "lat": 36.69385,
+    "lon": -121.647914,
+    "rating": 4.9,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "12 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Tech Tune Garage #1",
+    "lat": 36.684642,
+    "lon": -121.656135,
+    "rating": 4.1,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "22 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "23 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Highway Heroes #1",
+    "lat": 36.675906,
+    "lon": -121.650663,
+    "rating": 4.2,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "43 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "19 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "2 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Evergreen Auto #1",
+    "lat": 36.685187,
+    "lon": -121.651108,
+    "rating": 4.6,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "26 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "38 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Coastal Car Clinic #1",
+    "lat": 36.679178,
+    "lon": -121.652194,
+    "rating": 4.2,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "41 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "5 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "6 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Downtown Auto Haus #1",
+    "lat": 36.69074,
+    "lon": -121.643634,
+    "rating": 4.4,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "30 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Pinnacle Performance #1",
+    "lat": 36.675897,
+    "lon": -121.668533,
+    "rating": 4.2,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "7 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "19 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "18 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Ace Auto Repair #1",
+    "lat": 36.669188,
+    "lon": -121.661126,
+    "rating": 4.0,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "44 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "31 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "name": "Sunset Garage #1",
+    "lat": 36.684556,
+    "lon": -121.659508,
+    "rating": 4.7,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "14 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "40 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "name": "Greenlight Mechanics #1",
+    "lat": 36.687792,
+    "lon": -121.651431,
+    "rating": 4.4,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "19 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "name": "DriveTime Experts #1",
+    "lat": 36.680951,
+    "lon": -121.645536,
+    "rating": 4.3,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "8 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "name": "Bay City Auto #1",
+    "lat": 36.674588,
+    "lon": -121.653549,
+    "rating": 4.9,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "7 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "42 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "name": "Precision Auto #1",
+    "lat": 36.682091,
+    "lon": -121.656682,
+    "rating": 4.2,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "47 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "name": "Speedy Motors #2",
+    "lat": 36.68611,
+    "lon": -121.644132,
+    "rating": 4.7,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "15 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "9 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "25 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "name": "City Garage #2",
+    "lat": 36.677792,
+    "lon": -121.655785,
+    "rating": 4.2,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "10 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "11 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "5 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "name": "Elite Auto Works #2",
+    "lat": 36.68097,
+    "lon": -121.652239,
+    "rating": 4.5,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "36 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "name": "Metro Mechanics #2",
+    "lat": 36.678969,
+    "lon": -121.650671,
+    "rating": 4.3,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "11 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "45 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "15 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "name": "Rapid Repairs #2",
+    "lat": 36.680591,
+    "lon": -121.660029,
+    "rating": 4.1,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "41 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "name": "Northside Garage #2",
+    "lat": 36.674697,
+    "lon": -121.654767,
+    "rating": 4.1,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "2 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "name": "Urban Auto Pros #2",
+    "lat": 36.680531,
+    "lon": -121.649359,
+    "rating": 4.6,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "12 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "name": "Valley Vehicle Care #2",
+    "lat": 36.683702,
+    "lon": -121.649397,
+    "rating": 4.2,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "16 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "name": "Tech Tune Garage #2",
+    "lat": 36.679986,
+    "lon": -121.652686,
+    "rating": 4.3,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "31 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "40 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 30,
+    "name": "Highway Heroes #2",
+    "lat": 36.693082,
+    "lon": -121.644007,
+    "rating": 4.8,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "46 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "1 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "16 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 31,
+    "name": "Evergreen Auto #2",
+    "lat": 36.681982,
+    "lon": -121.640651,
+    "rating": 4.7,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "32 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 32,
+    "name": "Coastal Car Clinic #2",
+    "lat": 36.668596,
+    "lon": -121.649067,
+    "rating": 4.6,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "31 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 33,
+    "name": "Downtown Auto Haus #2",
+    "lat": 36.669758,
+    "lon": -121.660097,
+    "rating": 4.4,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "34 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "28 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 34,
+    "name": "Pinnacle Performance #2",
+    "lat": 36.683029,
+    "lon": -121.638036,
+    "rating": 4.0,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "20 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "8 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 35,
+    "name": "Ace Auto Repair #2",
+    "lat": 36.679265,
+    "lon": -121.667228,
+    "rating": 4.4,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "5 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "4 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 36,
+    "name": "Sunset Garage #2",
+    "lat": 36.686092,
+    "lon": -121.657163,
+    "rating": 4.7,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "31 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "15 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 37,
+    "name": "Greenlight Mechanics #2",
+    "lat": 36.679154,
+    "lon": -121.652249,
+    "rating": 4.2,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "34 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "41 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 38,
+    "name": "DriveTime Experts #2",
+    "lat": 36.668704,
+    "lon": -121.658994,
+    "rating": 4.7,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "11 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 39,
+    "name": "Bay City Auto #2",
+    "lat": 36.671326,
+    "lon": -121.65247,
+    "rating": 4.2,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "18 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "45 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "46 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 40,
+    "name": "Precision Auto #2",
+    "lat": 36.687277,
+    "lon": -121.655324,
+    "rating": 4.7,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "31 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "41 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "33 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 41,
+    "name": "Speedy Motors #3",
+    "lat": 36.679769,
+    "lon": -121.657154,
+    "rating": 4.7,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "14 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "30 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 42,
+    "name": "City Garage #3",
+    "lat": 36.676747,
+    "lon": -121.654817,
+    "rating": 4.8,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "29 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 43,
+    "name": "Elite Auto Works #3",
+    "lat": 36.679175,
+    "lon": -121.657077,
+    "rating": 4.9,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "6 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 44,
+    "name": "Metro Mechanics #3",
+    "lat": 36.672562,
+    "lon": -121.649235,
+    "rating": 4.3,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "32 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "29 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 45,
+    "name": "Rapid Repairs #3",
+    "lat": 36.674512,
+    "lon": -121.662059,
+    "rating": 4.3,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "35 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 46,
+    "name": "Northside Garage #3",
+    "lat": 36.684092,
+    "lon": -121.66011,
+    "rating": 4.2,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "28 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "43 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 47,
+    "name": "Urban Auto Pros #3",
+    "lat": 36.68843,
+    "lon": -121.656622,
+    "rating": 4.6,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "10 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "8 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "39 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 48,
+    "name": "Valley Vehicle Care #3",
+    "lat": 36.683531,
+    "lon": -121.66448,
+    "rating": 4.4,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "18 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 49,
+    "name": "Tech Tune Garage #3",
+    "lat": 36.681406,
+    "lon": -121.649483,
+    "rating": 4.0,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "5 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "32 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 50,
+    "name": "Highway Heroes #3",
+    "lat": 36.685566,
+    "lon": -121.654103,
+    "rating": 4.1,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "45 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "33 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 51,
+    "name": "Evergreen Auto #3",
+    "lat": 36.686957,
+    "lon": -121.653676,
+    "rating": 4.2,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "22 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "27 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 52,
+    "name": "Coastal Car Clinic #3",
+    "lat": 36.685485,
+    "lon": -121.662597,
+    "rating": 4.8,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "13 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "30 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 53,
+    "name": "Downtown Auto Haus #3",
+    "lat": 36.683259,
+    "lon": -121.659344,
+    "rating": 4.8,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "28 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "12 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "8 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 54,
+    "name": "Pinnacle Performance #3",
+    "lat": 36.691705,
+    "lon": -121.643914,
+    "rating": 4.6,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "19 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "6 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 55,
+    "name": "Ace Auto Repair #3",
+    "lat": 36.675364,
+    "lon": -121.654871,
+    "rating": 4.4,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "38 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "38 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 56,
+    "name": "Sunset Garage #3",
+    "lat": 36.685241,
+    "lon": -121.655533,
+    "rating": 4.4,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "36 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "16 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "8 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 57,
+    "name": "Greenlight Mechanics #3",
+    "lat": 36.674614,
+    "lon": -121.669398,
+    "rating": 4.7,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "33 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "6 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "23 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 58,
+    "name": "DriveTime Experts #3",
+    "lat": 36.676348,
+    "lon": -121.648324,
+    "rating": 4.6,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "29 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "13 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "9 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 59,
+    "name": "Bay City Auto #3",
+    "lat": 36.68412,
+    "lon": -121.651744,
+    "rating": 4.8,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "4 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "38 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 60,
+    "name": "Precision Auto #3",
+    "lat": 36.67561,
+    "lon": -121.639877,
+    "rating": 4.3,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "33 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "12 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 61,
+    "name": "Speedy Motors #4",
+    "lat": 36.677988,
+    "lon": -121.657232,
+    "rating": 4.6,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "25 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "4 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 62,
+    "name": "City Garage #4",
+    "lat": 36.683723,
+    "lon": -121.656686,
+    "rating": 4.4,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "41 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 63,
+    "name": "Elite Auto Works #4",
+    "lat": 36.68947,
+    "lon": -121.656035,
+    "rating": 4.0,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "18 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "45 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "44 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 64,
+    "name": "Metro Mechanics #4",
+    "lat": 36.675846,
+    "lon": -121.642419,
+    "rating": 4.0,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "36 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "48 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "11 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 65,
+    "name": "Rapid Repairs #4",
+    "lat": 36.68592,
+    "lon": -121.650057,
+    "rating": 4.3,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "34 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "12 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "16 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 66,
+    "name": "Northside Garage #4",
+    "lat": 36.681386,
+    "lon": -121.647632,
+    "rating": 4.2,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "33 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 67,
+    "name": "Urban Auto Pros #4",
+    "lat": 36.685992,
+    "lon": -121.656423,
+    "rating": 4.3,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "40 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "27 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "30 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 68,
+    "name": "Valley Vehicle Care #4",
+    "lat": 36.692586,
+    "lon": -121.644769,
+    "rating": 4.5,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "10 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "8 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 69,
+    "name": "Tech Tune Garage #4",
+    "lat": 36.681165,
+    "lon": -121.639469,
+    "rating": 4.5,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "45 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "28 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 70,
+    "name": "Highway Heroes #4",
+    "lat": 36.688878,
+    "lon": -121.639838,
+    "rating": 4.7,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "40 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "13 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "48 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 71,
+    "name": "Evergreen Auto #4",
+    "lat": 36.685274,
+    "lon": -121.638113,
+    "rating": 4.2,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "31 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "23 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 72,
+    "name": "Coastal Car Clinic #4",
+    "lat": 36.682776,
+    "lon": -121.669367,
+    "rating": 4.6,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "41 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "7 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 73,
+    "name": "Downtown Auto Haus #4",
+    "lat": 36.680225,
+    "lon": -121.660628,
+    "rating": 4.6,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "31 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "33 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 74,
+    "name": "Pinnacle Performance #4",
+    "lat": 36.675036,
+    "lon": -121.638564,
+    "rating": 4.7,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "30 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 75,
+    "name": "Ace Auto Repair #4",
+    "lat": 36.684293,
+    "lon": -121.65193,
+    "rating": 4.1,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "2 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "34 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "43 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 76,
+    "name": "Sunset Garage #4",
+    "lat": 36.679458,
+    "lon": -121.648431,
+    "rating": 4.4,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "5 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "42 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 77,
+    "name": "Greenlight Mechanics #4",
+    "lat": 36.671002,
+    "lon": -121.655579,
+    "rating": 4.4,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "24 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 78,
+    "name": "DriveTime Experts #4",
+    "lat": 36.679043,
+    "lon": -121.652584,
+    "rating": 4.4,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "25 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 79,
+    "name": "Bay City Auto #4",
+    "lat": 36.69415,
+    "lon": -121.646689,
+    "rating": 4.6,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "33 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 80,
+    "name": "Precision Auto #4",
+    "lat": 36.673403,
+    "lon": -121.659978,
+    "rating": 4.2,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "29 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "40 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "16 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 81,
+    "name": "Speedy Motors #5",
+    "lat": 36.675421,
+    "lon": -121.665189,
+    "rating": 4.7,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "2 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "45 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 82,
+    "name": "City Garage #5",
+    "lat": 36.669401,
+    "lon": -121.661631,
+    "rating": 4.9,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "4 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "32 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 83,
+    "name": "Elite Auto Works #5",
+    "lat": 36.682694,
+    "lon": -121.651025,
+    "rating": 4.6,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "17 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 84,
+    "name": "Metro Mechanics #5",
+    "lat": 36.670163,
+    "lon": -121.658012,
+    "rating": 4.4,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "46 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 85,
+    "name": "Rapid Repairs #5",
+    "lat": 36.677668,
+    "lon": -121.656212,
+    "rating": 4.3,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "13 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 86,
+    "name": "Northside Garage #5",
+    "lat": 36.68408,
+    "lon": -121.658901,
+    "rating": 4.2,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "21 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "22 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "6 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 87,
+    "name": "Urban Auto Pros #5",
+    "lat": 36.670833,
+    "lon": -121.669218,
+    "rating": 4.4,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "37 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "18 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 88,
+    "name": "Valley Vehicle Care #5",
+    "lat": 36.676824,
+    "lon": -121.645829,
+    "rating": 4.6,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "45 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "name": "Tech Tune Garage #5",
+    "lat": 36.688172,
+    "lon": -121.655445,
+    "rating": 4.8,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "43 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "name": "Highway Heroes #5",
+    "lat": 36.670621,
+    "lon": -121.646824,
+    "rating": 4.5,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "13 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "name": "Evergreen Auto #5",
+    "lat": 36.686002,
+    "lon": -121.648637,
+    "rating": 4.9,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "27 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "41 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "4 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "name": "Coastal Car Clinic #5",
+    "lat": 36.669312,
+    "lon": -121.655043,
+    "rating": 4.3,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "29 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "15 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "45 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 93,
+    "name": "Downtown Auto Haus #5",
+    "lat": 36.677586,
+    "lon": -121.656775,
+    "rating": 4.4,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "25 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "name": "Pinnacle Performance #5",
+    "lat": 36.691516,
+    "lon": -121.645779,
+    "rating": 4.2,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "14 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "45 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "46 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "name": "Ace Auto Repair #5",
+    "lat": 36.676408,
+    "lon": -121.650645,
+    "rating": 4.8,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "22 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 96,
+    "name": "Sunset Garage #5",
+    "lat": 36.671552,
+    "lon": -121.652351,
+    "rating": 4.1,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "27 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "45 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "19 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "name": "Greenlight Mechanics #5",
+    "lat": 36.673244,
+    "lon": -121.662081,
+    "rating": 4.3,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "37 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "29 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "45 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "name": "DriveTime Experts #5",
+    "lat": 36.693913,
+    "lon": -121.654204,
+    "rating": 4.7,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "7 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "name": "Bay City Auto #5",
+    "lat": 36.686734,
+    "lon": -121.63976,
+    "rating": 4.8,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "18 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "28 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "44 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 100,
+    "name": "Precision Auto #5",
+    "lat": 36.671983,
+    "lon": -121.660054,
+    "rating": 4.0,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "30 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "17 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 101,
+    "name": "Speedy Motors #6",
+    "lat": 36.682437,
+    "lon": -121.669867,
+    "rating": 4.1,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "37 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 102,
+    "name": "City Garage #6",
+    "lat": 36.676178,
+    "lon": -121.663531,
+    "rating": 4.6,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "32 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "19 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "38 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 103,
+    "name": "Elite Auto Works #6",
+    "lat": 36.682815,
+    "lon": -121.655364,
+    "rating": 4.3,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "36 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 104,
+    "name": "Metro Mechanics #6",
+    "lat": 36.690586,
+    "lon": -121.657282,
+    "rating": 4.8,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "32 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 105,
+    "name": "Rapid Repairs #6",
+    "lat": 36.693957,
+    "lon": -121.649599,
+    "rating": 4.5,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "38 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "21 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 106,
+    "name": "Northside Garage #6",
+    "lat": 36.683145,
+    "lon": -121.650726,
+    "rating": 4.4,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "19 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "41 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "27 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 107,
+    "name": "Urban Auto Pros #6",
+    "lat": 36.66925,
+    "lon": -121.669488,
+    "rating": 4.1,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "18 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "29 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 108,
+    "name": "Valley Vehicle Care #6",
+    "lat": 36.678807,
+    "lon": -121.66233,
+    "rating": 4.8,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "23 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 109,
+    "name": "Tech Tune Garage #6",
+    "lat": 36.682518,
+    "lon": -121.649199,
+    "rating": 4.1,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "42 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 110,
+    "name": "Highway Heroes #6",
+    "lat": 36.673142,
+    "lon": -121.645562,
+    "rating": 4.1,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "13 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 111,
+    "name": "Evergreen Auto #6",
+    "lat": 36.676941,
+    "lon": -121.650164,
+    "rating": 4.1,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "36 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "name": "Coastal Car Clinic #6",
+    "lat": 36.671014,
+    "lon": -121.664935,
+    "rating": 4.2,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "37 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "48 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "3 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 113,
+    "name": "Downtown Auto Haus #6",
+    "lat": 36.675885,
+    "lon": -121.638301,
+    "rating": 4.5,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "13 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "14 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 114,
+    "name": "Pinnacle Performance #6",
+    "lat": 36.685103,
+    "lon": -121.649845,
+    "rating": 4.0,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "21 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 115,
+    "name": "Ace Auto Repair #6",
+    "lat": 36.686813,
+    "lon": -121.649565,
+    "rating": 4.5,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "33 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 116,
+    "name": "Sunset Garage #6",
+    "lat": 36.687511,
+    "lon": -121.665092,
+    "rating": 4.3,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "26 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "24 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "31 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 117,
+    "name": "Greenlight Mechanics #6",
+    "lat": 36.678232,
+    "lon": -121.657135,
+    "rating": 4.5,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "7 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "44 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "12 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 118,
+    "name": "DriveTime Experts #6",
+    "lat": 36.67242,
+    "lon": -121.662618,
+    "rating": 4.9,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "32 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "35 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "17 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 119,
+    "name": "Bay City Auto #6",
+    "lat": 36.681372,
+    "lon": -121.653858,
+    "rating": 4.3,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "28 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 120,
+    "name": "Precision Auto #6",
+    "lat": 36.681009,
+    "lon": -121.65798,
+    "rating": 4.2,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "15 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 121,
+    "name": "Speedy Motors #7",
+    "lat": 36.684636,
+    "lon": -121.650952,
+    "rating": 4.3,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "46 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "32 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "47 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 122,
+    "name": "City Garage #7",
+    "lat": 36.677799,
+    "lon": -121.648527,
+    "rating": 4.2,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "33 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "1 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 123,
+    "name": "Elite Auto Works #7",
+    "lat": 36.684253,
+    "lon": -121.655611,
+    "rating": 4.4,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "13 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 124,
+    "name": "Metro Mechanics #7",
+    "lat": 36.687326,
+    "lon": -121.66695,
+    "rating": 4.3,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "19 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "10 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "23 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 125,
+    "name": "Rapid Repairs #7",
+    "lat": 36.671888,
+    "lon": -121.660171,
+    "rating": 4.5,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "29 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 126,
+    "name": "Northside Garage #7",
+    "lat": 36.677267,
+    "lon": -121.659916,
+    "rating": 4.8,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "47 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "41 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 127,
+    "name": "Urban Auto Pros #7",
+    "lat": 36.673317,
+    "lon": -121.656502,
+    "rating": 4.5,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "26 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 128,
+    "name": "Valley Vehicle Care #7",
+    "lat": 36.677389,
+    "lon": -121.643571,
+    "rating": 4.7,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "23 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "16 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 129,
+    "name": "Tech Tune Garage #7",
+    "lat": 36.69042,
+    "lon": -121.648242,
+    "rating": 4.7,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "20 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "17 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "name": "Highway Heroes #7",
+    "lat": 36.676337,
+    "lon": -121.652759,
+    "rating": 4.7,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "27 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 131,
+    "name": "Evergreen Auto #7",
+    "lat": 36.68321,
+    "lon": -121.661578,
+    "rating": 4.9,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "24 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "2 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 132,
+    "name": "Coastal Car Clinic #7",
+    "lat": 36.66833,
+    "lon": -121.648283,
+    "rating": 4.8,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "3 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 133,
+    "name": "Downtown Auto Haus #7",
+    "lat": 36.680995,
+    "lon": -121.663459,
+    "rating": 4.2,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "30 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "16 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 134,
+    "name": "Pinnacle Performance #7",
+    "lat": 36.671152,
+    "lon": -121.65037,
+    "rating": 4.2,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "25 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "41 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "23 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 135,
+    "name": "Ace Auto Repair #7",
+    "lat": 36.693085,
+    "lon": -121.638249,
+    "rating": 4.7,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "10 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "23 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "30 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 136,
+    "name": "Sunset Garage #7",
+    "lat": 36.685597,
+    "lon": -121.640047,
+    "rating": 4.3,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "46 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "33 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "19 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 137,
+    "name": "Greenlight Mechanics #7",
+    "lat": 36.669805,
+    "lon": -121.657549,
+    "rating": 4.5,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "41 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "1 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "42 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 138,
+    "name": "DriveTime Experts #7",
+    "lat": 36.671108,
+    "lon": -121.658439,
+    "rating": 4.1,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "25 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "42 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 139,
+    "name": "Bay City Auto #7",
+    "lat": 36.674939,
+    "lon": -121.639858,
+    "rating": 4.6,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "41 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "1 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "18 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 140,
+    "name": "Precision Auto #7",
+    "lat": 36.688651,
+    "lon": -121.668684,
+    "rating": 4.3,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "5 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 141,
+    "name": "Speedy Motors #8",
+    "lat": 36.670042,
+    "lon": -121.653063,
+    "rating": 4.2,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "40 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "38 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 142,
+    "name": "City Garage #8",
+    "lat": 36.668301,
+    "lon": -121.658723,
+    "rating": 4.9,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "19 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 143,
+    "name": "Elite Auto Works #8",
+    "lat": 36.673067,
+    "lon": -121.656669,
+    "rating": 4.4,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "41 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "48 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "43 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 144,
+    "name": "Metro Mechanics #8",
+    "lat": 36.673843,
+    "lon": -121.658483,
+    "rating": 4.8,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "25 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "6 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 145,
+    "name": "Rapid Repairs #8",
+    "lat": 36.675843,
+    "lon": -121.653088,
+    "rating": 4.2,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "35 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 146,
+    "name": "Northside Garage #8",
+    "lat": 36.674542,
+    "lon": -121.650397,
+    "rating": 4.7,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "11 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "21 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "34 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 147,
+    "name": "Urban Auto Pros #8",
+    "lat": 36.682552,
+    "lon": -121.644547,
+    "rating": 4.4,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "5 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "33 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "34 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 148,
+    "name": "Valley Vehicle Care #8",
+    "lat": 36.687683,
+    "lon": -121.652303,
+    "rating": 4.6,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "28 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "26 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 149,
+    "name": "Tech Tune Garage #8",
+    "lat": 36.690837,
+    "lon": -121.643024,
+    "rating": 4.8,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "13 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 150,
+    "name": "Highway Heroes #8",
+    "lat": 36.679223,
+    "lon": -121.645567,
+    "rating": 4.7,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "22 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 151,
+    "name": "Evergreen Auto #8",
+    "lat": 36.678288,
+    "lon": -121.654957,
+    "rating": 4.0,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "5 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "35 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "18 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 152,
+    "name": "Coastal Car Clinic #8",
+    "lat": 36.683635,
+    "lon": -121.666958,
+    "rating": 4.9,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "41 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "17 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "23 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 153,
+    "name": "Downtown Auto Haus #8",
+    "lat": 36.677901,
+    "lon": -121.649472,
+    "rating": 4.5,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "47 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "9 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "5 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 154,
+    "name": "Pinnacle Performance #8",
+    "lat": 36.675875,
+    "lon": -121.637878,
+    "rating": 4.2,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "47 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "39 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "18 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 155,
+    "name": "Ace Auto Repair #8",
+    "lat": 36.68929,
+    "lon": -121.644628,
+    "rating": 4.3,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "33 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "27 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 156,
+    "name": "Sunset Garage #8",
+    "lat": 36.672437,
+    "lon": -121.662511,
+    "rating": 4.6,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "44 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "27 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 157,
+    "name": "Greenlight Mechanics #8",
+    "lat": 36.684266,
+    "lon": -121.647695,
+    "rating": 4.9,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "32 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 158,
+    "name": "DriveTime Experts #8",
+    "lat": 36.681804,
+    "lon": -121.664893,
+    "rating": 4.5,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "5 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "32 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "8 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 159,
+    "name": "Bay City Auto #8",
+    "lat": 36.685147,
+    "lon": -121.65336,
+    "rating": 4.3,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "44 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "39 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 160,
+    "name": "Precision Auto #8",
+    "lat": 36.684059,
+    "lon": -121.665544,
+    "rating": 4.2,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "36 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "21 hours ago"
+      },
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "43 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 161,
+    "name": "Speedy Motors #9",
+    "lat": 36.67598,
+    "lon": -121.656836,
+    "rating": 4.1,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "43 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "15 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 162,
+    "name": "City Garage #9",
+    "lat": 36.692852,
+    "lon": -121.647228,
+    "rating": 4.5,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "3 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "10 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "31 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 163,
+    "name": "Elite Auto Works #9",
+    "lat": 36.676759,
+    "lon": -121.657903,
+    "rating": 4.4,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "36 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "30 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 164,
+    "name": "Metro Mechanics #9",
+    "lat": 36.670826,
+    "lon": -121.647943,
+    "rating": 4.8,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "13 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "36 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "29 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 165,
+    "name": "Rapid Repairs #9",
+    "lat": 36.673758,
+    "lon": -121.647265,
+    "rating": 4.7,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "43 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 166,
+    "name": "Northside Garage #9",
+    "lat": 36.678007,
+    "lon": -121.643899,
+    "rating": 4.1,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "19 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 167,
+    "name": "Urban Auto Pros #9",
+    "lat": 36.69084,
+    "lon": -121.637732,
+    "rating": 4.5,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "45 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "25 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "34 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 168,
+    "name": "Valley Vehicle Care #9",
+    "lat": 36.679778,
+    "lon": -121.655022,
+    "rating": 4.2,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "25 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 169,
+    "name": "Tech Tune Garage #9",
+    "lat": 36.669207,
+    "lon": -121.649204,
+    "rating": 4.4,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "12 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "1 hours ago"
+      },
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "18 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 170,
+    "name": "Highway Heroes #9",
+    "lat": 36.670604,
+    "lon": -121.66767,
+    "rating": 4.6,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "26 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "16 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 171,
+    "name": "Evergreen Auto #9",
+    "lat": 36.687477,
+    "lon": -121.664405,
+    "rating": 4.2,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "45 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "19 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 172,
+    "name": "Coastal Car Clinic #9",
+    "lat": 36.668692,
+    "lon": -121.652985,
+    "rating": 4.6,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "13 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "41 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 173,
+    "name": "Downtown Auto Haus #9",
+    "lat": 36.669071,
+    "lon": -121.664798,
+    "rating": 4.1,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "29 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "16 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "19 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 174,
+    "name": "Pinnacle Performance #9",
+    "lat": 36.691012,
+    "lon": -121.640943,
+    "rating": 4.8,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "41 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 175,
+    "name": "Ace Auto Repair #9",
+    "lat": 36.671267,
+    "lon": -121.648736,
+    "rating": 4.1,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "18 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "36 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "5 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 176,
+    "name": "Sunset Garage #9",
+    "lat": 36.67733,
+    "lon": -121.640677,
+    "rating": 4.6,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "17 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "11 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 177,
+    "name": "Greenlight Mechanics #9",
+    "lat": 36.686061,
+    "lon": -121.655838,
+    "rating": 4.0,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "18 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 178,
+    "name": "DriveTime Experts #9",
+    "lat": 36.691312,
+    "lon": -121.654351,
+    "rating": 4.9,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "21 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 179,
+    "name": "Bay City Auto #9",
+    "lat": 36.686559,
+    "lon": -121.655361,
+    "rating": 4.0,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "32 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "32 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "1 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 180,
+    "name": "Precision Auto #9",
+    "lat": 36.668295,
+    "lon": -121.664172,
+    "rating": 4.7,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "9 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "13 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 181,
+    "name": "Speedy Motors #10",
+    "lat": 36.681457,
+    "lon": -121.662664,
+    "rating": 4.1,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "41 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "45 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 182,
+    "name": "City Garage #10",
+    "lat": 36.677447,
+    "lon": -121.655011,
+    "rating": 4.3,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "13 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 183,
+    "name": "Elite Auto Works #10",
+    "lat": 36.693265,
+    "lon": -121.647202,
+    "rating": 4.7,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Now offering summer A/C recharge deals! \ud83c\udf1e\u2744\ufe0f",
+        "timestamp": "12 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 184,
+    "name": "Metro Mechanics #10",
+    "lat": 36.676147,
+    "lon": -121.661345,
+    "rating": 4.3,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "22 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "24 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 185,
+    "name": "Rapid Repairs #10",
+    "lat": 36.683921,
+    "lon": -121.663536,
+    "rating": 4.1,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "6 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "14 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "44 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 186,
+    "name": "Northside Garage #10",
+    "lat": 36.685229,
+    "lon": -121.649155,
+    "rating": 4.5,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "2 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 187,
+    "name": "Urban Auto Pros #10",
+    "lat": 36.681834,
+    "lon": -121.64631,
+    "rating": 4.0,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "23 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "28 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 188,
+    "name": "Valley Vehicle Care #10",
+    "lat": 36.684883,
+    "lon": -121.668979,
+    "rating": 4.2,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "3 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "32 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 189,
+    "name": "Tech Tune Garage #10",
+    "lat": 36.671262,
+    "lon": -121.666435,
+    "rating": 4.4,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "5 hours ago"
+      },
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "14 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "29 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 190,
+    "name": "Highway Heroes #10",
+    "lat": 36.686359,
+    "lon": -121.66476,
+    "rating": 4.3,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "1 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 191,
+    "name": "Evergreen Auto #10",
+    "lat": 36.679941,
+    "lon": -121.665156,
+    "rating": 4.9,
+    "description": "General repairs",
+    "posts": [
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "28 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "7 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 192,
+    "name": "Coastal Car Clinic #10",
+    "lat": 36.686201,
+    "lon": -121.645002,
+    "rating": 4.1,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Free engine diagnostic for first-time customers.",
+        "timestamp": "22 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "15 hours ago"
+      },
+      {
+        "content": "Battery diagnostics now free through April!",
+        "timestamp": "7 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 193,
+    "name": "Downtown Auto Haus #10",
+    "lat": 36.676577,
+    "lon": -121.640628,
+    "rating": 4.3,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "40 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 194,
+    "name": "Pinnacle Performance #10",
+    "lat": 36.668977,
+    "lon": -121.653096,
+    "rating": 4.5,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "12 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "16 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "29 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 195,
+    "name": "Ace Auto Repair #10",
+    "lat": 36.668409,
+    "lon": -121.649175,
+    "rating": 4.1,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "19 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "14 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 196,
+    "name": "Sunset Garage #10",
+    "lat": 36.67517,
+    "lon": -121.643748,
+    "rating": 4.1,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "13 hours ago"
+      },
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "29 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "25 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 197,
+    "name": "Greenlight Mechanics #10",
+    "lat": 36.689365,
+    "lon": -121.656596,
+    "rating": 4.2,
+    "description": "Tire & brake service",
+    "posts": [
+      {
+        "content": "Mobile tire change service now available \ud83d\ude97\ud83d\udd27",
+        "timestamp": "44 hours ago"
+      },
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "46 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 198,
+    "name": "DriveTime Experts #10",
+    "lat": 36.667927,
+    "lon": -121.665032,
+    "rating": 4.5,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "15 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 199,
+    "name": "Bay City Auto #10",
+    "lat": 36.675064,
+    "lon": -121.651086,
+    "rating": 4.5,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Oil change + fluid top-off just $39.99!",
+        "timestamp": "45 hours ago"
+      },
+      {
+        "content": "AC system inspection special \u2014 limited time!",
+        "timestamp": "38 hours ago"
+      },
+      {
+        "content": "Smog checks discounted for early birds!",
+        "timestamp": "24 hours ago"
+      }
+    ]
+  },
+  {
+    "id": 200,
+    "name": "Precision Auto #10",
+    "lat": 36.670678,
+    "lon": -121.645899,
+    "rating": 4.4,
+    "description": "Brake service and oil change",
+    "posts": [
+      {
+        "content": "Get 20% off brake pads this weekend only!",
+        "timestamp": "42 hours ago"
+      }
+    ]
+  }
+]

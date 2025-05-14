@@ -1,8 +1,13 @@
 package com.example.backend.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class UserLoginRequest {
 
+    @JsonProperty("email")
     private String email;
+
+    @JsonProperty("password")
     private String password;
 
     public String getEmail() {

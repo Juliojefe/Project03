@@ -1,6 +1,5 @@
-
 import React from 'react';
-import StackNavigator from './android/navigation/StackNavigator';
+import StackNavigator from '../android/navigation/StackNavigator';
 import { NavigationContainer } from '@react-navigation/native';
 
 export default function App() {
@@ -9,5 +8,5 @@ export default function App() {
       <StackNavigator />
     </NavigationContainer>
 
- );
-}
+  
+  );}

@@ -5,12 +5,12 @@ import {
   StyleSheet,
   Alert,
   ScrollView,
-  Button,
+  Modal,
   TouchableOpacity,
 } from 'react-native';
-import MapView, { Marker, Callout, Circle } from 'react-native-maps';
-import mechanicData from '../navigation/mechanics.json'; // Mock data for mechanics
+import MapView, { Marker, Circle } from 'react-native-maps';
 import Slider from '@react-native-community/slider';
+import mechanicData from '../navigation/mechanics.json';
 
 interface Mechanic {
   id: number;
@@ -26,9 +26,9 @@ export default function MechanicMapScreen({ navigation }: any) {
   const [radius, setRadius] = useState(15);
   const [mechanics, setMechanics] = useState<Mechanic[]>([]);
   const [region, setRegion] = useState<any>(null);
+  const [selectedMechanic, setSelectedMechanic] = useState<Mechanic | null>(null);
 
   useEffect(() => {
-    // Set fake user location (Salinas center)
     const defaultCoords = {
       latitude: 36.6777,
       longitude: -121.6555,
@@ -41,7 +41,7 @@ export default function MechanicMapScreen({ navigation }: any) {
       longitudeDelta: 0.05,
     });
 
-    setMechanics(mechanicData); // Load mock mechanic data
+    setMechanics(mechanicData);
   }, []);
 
   const zoomIn = () => {
@@ -71,32 +71,65 @@ export default function MechanicMapScreen({ navigation }: any) {
       {region && (
         <MapView style={styles.map} region={region} onRegionChangeComplete={setRegion}>
           {location && (
-            <Marker coordinate={location} title="You Are Here" pinColor="red" />
+            <>
+              <Marker coordinate={location} title="You Are Here" pinColor="red" />
+              <Circle
+                center={location}
+                radius={radius * 1609.34}
+                strokeColor="red"
+                fillColor="rgba(255, 0, 0, 0.2)"
+              />
+            </>
           )}
-          <Circle
-            center={location || region}
-            radius={radius * 1609.34}
-            strokeColor="red"
-            fillColor="rgba(255, 0, 0, 0.2)"
-          />
           {mechanics.map((m) => (
             <Marker
               key={m.id}
               coordinate={{ latitude: m.lat, longitude: m.lon }}
               pinColor="blue"
-            >
-              <Callout onPress={() => navigation.navigate('Posts', { mechanic: m })}>
-                <View style={styles.calloutView}>
-                  <Text style={styles.calloutTitle}>{m.name}</Text>
-                  <Text>{m.description}</Text>
-                  <Text>⭐ {m.rating.toFixed(1)}</Text>
-                  <Text style={{ color: 'blue', marginTop: 5 }}>Tap to View Posts</Text>
-                </View>
-              </Callout>
-            </Marker>
+              onPress={() => setSelectedMechanic(m)}
+            />
           ))}
         </MapView>
       )}
+
+      {/* Modal for selected mechanic */}
+      <Modal visible={!!selectedMechanic} transparent animationType="slide">
+        <View style={styles.modalOverlay}>
+          <View style={styles.modalContent}>
+            <Text style={styles.modalTitle}>{selectedMechanic?.name}</Text>
+            <Text>{selectedMechanic?.description}</Text>
+            <View style={{ flexDirection: 'row', marginVertical: 5 }}>
+              {Array.from({ length: 5 }, (_, i) => (
+                <Text key={i}>{i < Math.round(selectedMechanic?.rating || 0) ? '⭐' : '☆'}</Text>
+              ))}
+            </View>
+
+            <TouchableOpacity
+              style={[styles.modalButton, { backgroundColor: '#2563eb' }]}
+              onPress={() => {
+                setSelectedMechanic(null);
+                navigation.navigate('Posts', { mechanic: selectedMechanic });
+              }}
+            >
+              <Text style={styles.modalButtonText}>View Posts</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity
+              style={[styles.modalButton, { backgroundColor: '#10b981' }]}
+              onPress={() => {
+                setSelectedMechanic(null);
+                Alert.alert('Message Shop', 'This feature is coming soon!');
+              }}
+            >
+              <Text style={styles.modalButtonText}>Message</Text>
+            </TouchableOpacity>
+
+            <TouchableOpacity onPress={() => setSelectedMechanic(null)}>
+              <Text style={{ color: 'gray', marginTop: 10 }}>Close</Text>
+            </TouchableOpacity>
+          </View>
+        </View>
+      </Modal>
 
       <View style={styles.sliderContainer}>
         <Text style={styles.radiusText}>Radius: {radius} miles</Text>
@@ -126,8 +159,21 @@ export default function MechanicMapScreen({ navigation }: any) {
           <View key={m.id} style={styles.card}>
             <Text style={styles.cardTitle}>{m.name}</Text>
             <Text>{m.description}</Text>
-            <Text>⭐ {m.rating.toFixed(1)}</Text>
-            <Button title="Message Shop" onPress={() => navigation.navigate('Posts', { mechanic: m })} />
+            <Text style={{ marginBottom: 10 }}>⭐ {m.rating.toFixed(1)}</Text>
+            <View style={{ flexDirection: 'row', justifyContent: 'space-between' }}>
+              <TouchableOpacity
+                style={[styles.cardBtn, { backgroundColor: '#2563eb' }]}
+                onPress={() => navigation.navigate('Posts', { mechanic: m })}
+              >
+                <Text style={styles.cardBtnText}>View Posts</Text>
+              </TouchableOpacity>
+              <TouchableOpacity
+                style={[styles.cardBtn, { backgroundColor: '#10b981' }]}
+                onPress={() => Alert.alert('Message Shop', 'This feature is coming soon!')}
+              >
+                <Text style={styles.cardBtnText}>Message</Text>
+              </TouchableOpacity>
+            </View>
           </View>
         ))}
       </ScrollView>
@@ -187,12 +233,43 @@ const styles = StyleSheet.create({
     marginBottom: 5,
     color: '#1e3a8a',
   },
-  calloutView: {
-    minWidth: 200,
+  cardBtn: {
+    flex: 1,
+    marginHorizontal: 5,
+    paddingVertical: 10,
+    borderRadius: 8,
+    alignItems: 'center',
   },
-  calloutTitle: {
+  cardBtnText: {
+    color: '#fff',
+    fontWeight: '600',
+  },
+  modalOverlay: {
+    flex: 1,
+    justifyContent: 'flex-end',
+    backgroundColor: 'rgba(0,0,0,0.5)',
+  },
+  modalContent: {
+    backgroundColor: '#fff',
+    padding: 20,
+    borderTopLeftRadius: 20,
+    borderTopRightRadius: 20,
+    alignItems: 'center',
+  },
+  modalTitle: {
+    fontSize: 18,
     fontWeight: 'bold',
-    fontSize: 16,
-    marginBottom: 4,
+    marginBottom: 10,
+  },
+  modalButton: {
+    width: '100%',
+    paddingVertical: 12,
+    borderRadius: 8,
+    marginTop: 10,
+    alignItems: 'center',
+  },
+  modalButtonText: {
+    color: '#fff',
+    fontWeight: '600',
   },
 });

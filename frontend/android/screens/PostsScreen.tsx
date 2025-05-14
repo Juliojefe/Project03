@@ -11,7 +11,7 @@ import {
   Button,
   Alert,
 } from 'react-native';
-import { useRoute } from '@react-navigation/native';
+import { useRoute, useNavigation } from '@react-navigation/native';
 import * as ImagePicker from 'expo-image-picker';
 
 interface Comment {
@@ -34,28 +34,21 @@ interface Post {
 
 export default function PostsScreen() {
   const route = useRoute();
+  const navigation = useNavigation();
   const mechanic = route.params?.mechanic;
 
-  const [posts, setPosts] = useState<Post[]>([
-    {
-      id: 1,
-      author: mechanic?.name ?? "Joe's Garage",
+  const [posts, setPosts] = useState<Post[]>(() => {
+    const rawPosts = mechanic?.posts ?? [];
+    return rawPosts.map((post: any, index: number) => ({
+      id: index + 1,
+      author: mechanic.name,
       userType: 'mechanic',
-      content: 'Now offering summer A/C recharge deals! 🌞❄️',
-      timestamp: '2 hours ago',
+      content: post.content,
+      timestamp: post.timestamp,
       comments: [],
       editable: true,
-    },
-    {
-      id: 2,
-      author: mechanic?.name ?? 'Precision Motors',
-      userType: 'mechanic',
-      content: 'Battery diagnostics now free through April!',
-      timestamp: '5 hours ago',
-      comments: [],
-      editable: false,
-    },
-  ]);
+    }));
+  });
 
   const [editingPost, setEditingPost] = useState<Post | null>(null);
   const [editModalVisible, setEditModalVisible] = useState(false);
@@ -130,6 +123,14 @@ export default function PostsScreen() {
   return (
     <ScrollView style={styles.container}>
       <Text style={styles.header}>🔧 Posts from {mechanic?.name ?? 'Selected Mechanic'}</Text>
+
+      {/* Edit Account Button */}
+      <TouchableOpacity
+        onPress={() => navigation.navigate('EditAccount')}
+        style={{ alignSelf: 'flex-end', marginBottom: 10 }}
+      >
+        <Text style={{ color: '#2563eb', fontWeight: 'bold' }}>✏️ Edit Account</Text>
+      </TouchableOpacity>
 
       {posts.map((post) => (
         <View key={post.id} style={styles.postCard}>
@@ -213,6 +214,9 @@ export default function PostsScreen() {
     </ScrollView>
   );
 }
+
+// ... (your styles object remains the same)
+
 
 const styles = StyleSheet.create({
   container: {

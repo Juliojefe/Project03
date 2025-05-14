@@ -1,7 +1,8 @@
 package com.example.backend.model;
 
-import jakarta.persistence.*;
 import com.example.backend.enums.UserType;
+import com.example.backend.enums.UserTypeConverter;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "user")
@@ -21,8 +22,8 @@ public class User {
     @Column(name = "password", nullable = false)
     private String password;
 
+    @Convert(converter = UserTypeConverter.class) //: Use custom enum converter
     @Column(name = "user_type", nullable = false)
-    @Enumerated(EnumType.STRING)
     private UserType userType;
 
     @Column(name = "profile_pic")
@@ -77,4 +78,24 @@ public class User {
     public void setProfilePic(String profilePic) {
         this.profilePic = profilePic;
     }
+    private boolean isMechanic = false;
+private boolean mechanicRequestPending = false;
+
+public boolean isMechanic() {
+    return isMechanic;
 }
+
+public void setMechanic(boolean mechanic) {
+    isMechanic = mechanic;
+}
+
+public boolean isMechanicRequestPending() {
+    return mechanicRequestPending;
+}
+
+public void setMechanicRequestPending(boolean mechanicRequestPending) {
+    this.mechanicRequestPending = mechanicRequestPending;
+}
+
+}
+

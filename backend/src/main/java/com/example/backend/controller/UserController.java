@@ -17,18 +17,26 @@ public class UserController {
 
     @PostMapping("/register")
     public boolean register(@RequestBody UserRegisterRequest request) {
+        System.out.println("REGISTER REQUEST:");
+        System.out.println("Name: " + request.getName());
+        System.out.println("Email: " + request.getEmail());
+        System.out.println("Password: " + request.getPassword());
+       
         return userService.registerUser(request);
     }
+    
 
     @PostMapping("/login")
-    public UserLoginResponse loginUser(@RequestBody UserLoginRequest request) {
+    public User loginUser(@RequestBody UserLoginRequest request) {
+        System.out.println("LOGIN REQUEST: " + request.getEmail() + " / " + request.getPassword());
         return userService.loginUser(request);
     }
+    
 
-    @GetMapping("/")
-    public List<User> getAllUsers() {
-        return userService.getAllUsers();
-    }
+   // @GetMapping("/")
+   // public List<User> getAllUsers() {
+      //  return userService.getAllUsers();
+    //}
 
     @PatchMapping("/update-name/{id}/name")
     public boolean updateUserName(@RequestBody UpdateNameRequest request) {
@@ -69,5 +77,4 @@ public class UserController {
     public boolean deleteUser(@RequestBody DeleteUserRequest request) {
         return userService.deleteUser(request);
     }
-
 }
